@@ -3,14 +3,18 @@
 Plantilla para ejercicios de diagramas de clases utilizando **Mermaid**
 
 ## Instrucciones
-La platilla consta de dos ejercicios (Planteamiento/Diagrama de clases). Leer cada sección **Planteamiento de ejercicio** y diseñar el diagrama de clases en la sección **Diagrama de clases** inmediata siguiente.
+La plantilla consta de dos ejercicios (Planteamiento/Diagrama de clases). Leer cada sección **Planteamiento de ejercicio** y diseñar el diagrama de clases en la sección **Diagrama de clases** inmediata siguiente.
 
 ## Planteamiento de ejercicio 1
-Aplicación de Computadora  
-Una aplicación necesita almacenar información sobre empresas, sus empleados y sus clientes. Tanto empleados como clientes se caracterizan por su nombre y su edad.
-Los empleados tienen un sueldo bruto, los empleados que son directivos tienen una categoría, así como un conjunto de empleados subordinados.
-De los clientes además, se necesita conocer su teléfono de contacto
-La aplicación necesita mostrar los datos de empleados y clientes
+Compañías ferroviarias
+
+Se desea modelar la funcionalidad requerida para un subsistema de gestión de trenes de compañías ferroviarias, tomando en consideración la siguiente información.
+
+En primer lugar, toda compañía (con su denominación) a considerar posee al menos un tren. Cada tren está compuesto por una máquina locomotora y al menos un vagón. Pueden existir vagones y máquinas no asignados a tren alguno. Cada tren tiene un código identificador propio de su compañía, los vagones una capacidad máxima, y las máquinas locomotoras una potencia máxima.
+
+Una compañía tiene al menos un empleado, del que se almacenan sus principales datos, como son el nombre, el número de la seguridad social y el domicilio. Según su trabajo, estos pueden ser jefes u operarios. Si es jefe, se almacena su número de teléfono. Cada empleado puede tener designados un conjunto de máquinas locomotoras y/o vagones. A su vez, cada máquina locomotora o vagón podrá estar asignado a un conjunto de empleados. Eso sí, cada tren tiene siempre asignado su jefe, y cada máquina tiene un operario que la conduce.
+
+El diagrama de clases debe mostrar las relaciones existentes entre trenes y empleados, así como su cardinalidad.
 
 ## Diagrama de clases 1
 [Editor en línea](https://mermaid.live/)
@@ -30,12 +34,11 @@ classDiagram
 [Referencia-Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
 ## Planteamiento de ejercicio 2
-Biblioteca  
-Una biblioteca tiene varios ejemplares de libros. Los libros se caracterizan por su nombre, tipo (novela, teatro, poesía, ensayo), editorial, año y autor. Los autores se caracterizan por su nombre, nacionalidad y fecha de nacimiento.
-Cada ejemplar de un libro tiene un identificador y puede estar en la biblioteca, prestado, con retraso o en reparación. Los lectores pueden tener un máximo de 3 libros en préstamo.
-Cada libro se presta un máximo de 30 días, por cada día de retraso, se impone una “multa” de dos días sin posibilidad de sacar un nuevo libro.
-**Nota:** Añada los métodos necesarios para realizar el préstamo y devolución de libros.
+Facturas
 
+En un programa de computadora, las facturas tienen necesariamente un conjunto de datos del proveedor, un conjunto de datos del cliente, un importe y una fecha. Los datos del cliente son el nombre y la fiabilidad de pago, mientras que los datos del proveedor son sólo su nombre. Dentro de la categoría cliente está el subtipo “cliente moroso”, que lleva también asociado el importe de la deuda. 
+
+El diagrama de clases debe mostrar las clases Factura, Datos_del_cliente, Cliente_moroso y Datos_del_proveedor; así como las relaciones entre las clases.
 ## Diagrama de clases 2
 [Editor en línea](https://mermaid.live/)
 ```mermaid
